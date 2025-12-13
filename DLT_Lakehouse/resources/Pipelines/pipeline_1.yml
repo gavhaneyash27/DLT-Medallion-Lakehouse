@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_dlt_pipeline_using_autoloader:
+      name: DLT_Pipeline_Using_Autoloader
+      libraries:
+        - glob:
+            include: ../../src/DLT_Pipeline_Using_Autoloader/transformations/**
+      schema: dlt_schema
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: databricksyash
+      serverless: true
+      root_path: ../../src/DLT_Pipeline_Using_Autoloader
